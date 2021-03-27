@@ -1,0 +1,82 @@
+
+.ant-switch {
+    .ant-switch-handle{ 
+        top: -2px;
+        width: 28px;
+        height: 28px;
+        left: calc(100% - 50px);
+        &::before{
+            background-color: #00c8f8;
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -khtml-border-radius: 50%;
+        } 
+    }
+}
+.ant-switch[aria-checked="false"]{
+    background-color: #b5b5b5;
+    .ant-switch-handle{
+        &::before{background-color: #919191;} 
+    }
+}
+.ant-switch-checked[aria-checked="true"]{
+    background-color: #0f213c;
+}
+.click-yes{
+    &::before{
+        content: "Да";
+    }
+}
+.click-no{
+    &::before{
+        content: "Нет";
+    }
+}
+
+
+.switch__wrapper{
+    /*border: 2px solid silver;*/
+    box-shadow: -3px 3px 9px -4px #000000;
+    display: grid;
+    grid-template-columns: .5fr 1fr 1fr .5fr;
+    grid-gap: 10px;
+    grid-auto-rows: 200px;
+    grid-template-areas:
+    ". a a ."
+    ". a a .";
+    div{
+        grid-area: a;
+        align-self: center;
+        justify-self: center;
+        .switch__box-left{
+            padding: 20px;
+            position: relative;
+            float: right;
+            text-align: right;
+            margin-right: 40px;
+            span{
+                position: absolute;
+                top:-36px;
+                right: 23px;
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: #dedfe2;
+            }
+        }
+        .switch__box-right{
+            padding: 20px;
+            position: relative;
+            float: left;
+            text-align: left;
+            span{
+                position: absolute;
+                top:-36px;
+                left: 20px;
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: #dedfe2;
+            }
+        }
+    }
+}
